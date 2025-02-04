@@ -6,7 +6,7 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
-    question.innerHTML = "REALLLY? AHH THANK YOU!! <3D";
+    question.innerHTML = "REALLLY? AHH THANK YOU!! <3";
     gif.src = "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gifyou.webp";
 
     // Hide the buttons
