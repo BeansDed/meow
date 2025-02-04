@@ -1,12 +1,13 @@
-
 const wrapper = document.querySelector(".wrapper");
 const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
+const muteBtn = document.querySelector("#mute-btn");
+const backgroundMusic = document.querySelector("#background-music");
 
 yesBtn.addEventListener("click", () => {
-    question.innerHTML = "REALLLY? AHH THANK YOU!! <3";
+    question.innerHTML = "REALLY? AHH THANK YOU!! <3";
     gif.src = "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gifyou.webp";
 
     // Hide the buttons
@@ -16,7 +17,7 @@ yesBtn.addEventListener("click", () => {
 
 noBtn.addEventListener("mouseover", () => {
     const noBtnRect = noBtn.getBoundingClientRect();
-    const maxX = window.innerWidth - noBtnRect.width - 10; // Leave 10px margin
+    const maxX = window.innerWidth - noBtnRect.width - 10;
     const maxY = window.innerHeight - noBtnRect.height - 10;
 
     const randomX = Math.floor(Math.random() * maxX);
@@ -25,4 +26,15 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.position = "absolute";
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
+});
+
+// Music mute/unmute functionality
+muteBtn.addEventListener("click", () => {
+    if (backgroundMusic.muted) {
+        backgroundMusic.muted = false;
+        muteBtn.textContent = "🔊";
+    } else {
+        backgroundMusic.muted = true;
+        muteBtn.textContent = "🔇";
+    }
 });

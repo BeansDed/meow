@@ -67,28 +67,21 @@ button:hover {
     margin-left: 10px;
 }
 
-.hearts-container {
+.music-control {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    top: 20px;
+    right: 20px;
 }
 
-.heart {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    background: red;
-    clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
-    animation: float 8s infinite ease-in-out;
-    opacity: 0.7;
+#mute-btn {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #e94d58;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(100vh) scale(0.8);
-    }
-    100% {
-        transform: translateY(-10vh) scale(1.2);
-    }
+#mute-btn:hover {
+    transform: scale(1.2);
 }
