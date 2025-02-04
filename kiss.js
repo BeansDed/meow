@@ -7,8 +7,8 @@ const flowerBtn = document.querySelector(".flower-btn");
 const muteBtn = document.querySelector("#mute-btn");
 const backgroundMusic = document.querySelector("#background-music");
 
-// Set initial volume to 30%
-backgroundMusic.volume = 0.3;
+// Set initial volume to 10%
+backgroundMusic.volume = 0.05;
 
 // Start music on user interaction (needed for mobile devices)
 document.body.addEventListener("click", () => {
