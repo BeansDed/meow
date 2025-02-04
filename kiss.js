@@ -3,8 +3,12 @@ const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
+const flowerBtn = document.querySelector(".flower-btn");
 const muteBtn = document.querySelector("#mute-btn");
 const backgroundMusic = document.querySelector("#background-music");
+
+// Set initial volume to 30%
+backgroundMusic.volume = 0.3;
 
 // Start music on user interaction (needed for mobile devices)
 document.body.addEventListener("click", () => {
@@ -20,6 +24,7 @@ yesBtn.addEventListener("click", () => {
     // Hide the buttons
     yesBtn.style.display = "none";
     noBtn.style.display = "none";
+    flowerBtn.style.display = "none";
 });
 
 noBtn.addEventListener("mouseover", () => {
@@ -33,6 +38,10 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.position = "absolute";
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
+});
+
+flowerBtn.addEventListener("click", () => {
+    window.location.href = "flower.html";
 });
 
 // Music mute/unmute functionality
