@@ -6,6 +6,13 @@ const noBtn = document.querySelector(".no-btn");
 const muteBtn = document.querySelector("#mute-btn");
 const backgroundMusic = document.querySelector("#background-music");
 
+// Start music on user interaction (needed for mobile devices)
+document.body.addEventListener("click", () => {
+    if (backgroundMusic.paused) {
+        backgroundMusic.play();
+    }
+}, { once: true });
+
 yesBtn.addEventListener("click", () => {
     question.innerHTML = "REALLY? AHH THANK YOU!! <3";
     gif.src = "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gifyou.webp";
