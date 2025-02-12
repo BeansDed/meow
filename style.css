@@ -1,0 +1,98 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive, Arial, sans-serif;
+}
+
+/* Background */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+    text-align: center;
+}
+
+/* Envelope & Letter */
+.letter {
+    position: relative;
+    width: 400px;
+    height: auto;
+}
+
+.envelope {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Signature */
+.signature {
+    font-size: 1.5em;
+    color: #d63384;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Flower Button */
+.flower-btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.4em;
+    padding: 12px 24px;
+    background: #ffc1cc;
+    color: #d63384;
+    border: 2px solid #d63384;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.flower-btn:hover {
+    background: #ff4081;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .letter {
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .flower-btn {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+}
